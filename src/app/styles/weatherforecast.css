@@ -1,0 +1,118 @@
+/* General Page Styles */
+.weather-app-page {
+    background-color: #2D2F2E;
+    color: #F0F0D7;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    padding: 16px;
+  }
+  
+  /* Header Styles */
+  .weather-app-header {
+    background-color: #3C3F3E;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    color: #AAB99A;
+  }
+  
+  .weather-app-header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  /* Main Section Styles */
+  .weather-app-main {
+    margin-top: 20px;
+  }
+  
+  /* Search Section */
+  .search-section {
+    background-color: #3C3F3E;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .search-form {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .search-input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+    background-color: #727D73;
+    color: #F0F0D7;
+  }
+  
+  .search-input:focus {
+    outline: 2px solid #AAB99A;
+  }
+  
+  .search-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #AAB99A;
+    color: #2D2F2E;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .search-button:hover {
+    background-color: #D0DDD0;
+  }
+  
+  /* Weather Info Section */
+  .weather-info {
+    background-color: #727D73;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  .weather-info h2 {
+    font-size: 1.5rem;
+    color: #F0F0D7;
+    margin-bottom: 10px;
+  }
+  
+  .weather-info p {
+    margin: 5px 0;
+  }
+  
+  /* Error Message */
+  .error-message {
+    color: #FF5C5C;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  /* Weather Animations */
+  .weather-animation {
+    font-size: 3rem;
+    margin-top: 20px;
+  }
+  
+  .weather-animation.hot {
+    color: #FF8C42;
+  }
+  
+  .weather-animation.cold {
+    color: #42A5F5;
+  }
+  
+  .weather-animation.rainy {
+    color: #42B3D5;
+  }
+  
+  .weather-animation.foggy {
+    color: #B0BEC5;
+  }
+  

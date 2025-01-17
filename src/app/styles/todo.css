@@ -1,0 +1,352 @@
+/* General styles */
+.todoApp {
+  background-color: #D0DDD0;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 20px auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.todoApp h1 {
+  text-align: center;
+  color: #333;
+}
+
+.todoApp form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.todoApp input,
+.todoApp select,
+.todoApp button {
+  padding: 10px;
+  font-size: 1em;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.todoApp button {
+  background-color: #AAB99A;
+  color: white;
+  cursor: pointer;
+}
+
+.todoApp button:hover {
+  background-color: #727D73;
+}
+
+.filters {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.filters button {
+  padding: 8px 36px;
+  border: none;
+  background-color: #B7B7B7;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.filters button:hover {
+  background-color: #bbb;
+}
+
+.filters buttonhigh {
+  padding: 8px 16px;
+  border: none;
+  background-color: #E16A54;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.filters button1:hover {
+  background-color: #bbb;
+}
+
+
+.taskList {
+  margin-top: 20px;
+}
+
+.taskCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.taskCard.high {
+  background-color: #f8d7da;
+}
+
+.taskCard.medium {
+  background-color: #fff3cd;
+}
+
+.taskCard.low {
+  background-color: #d4edda;
+}
+
+/* Center Calendar Button */
+.calendarButton {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+
+
+/* Calendar Styles */
+.calendarContainer {
+  margin-top: 20px;
+}
+
+.calendarGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+  margin-top: 10px;
+  background-color: #f8f8f8;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.calendar-day {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.calendar-day.highlight {
+  background-color: #d4edda;
+  font-weight: bold;
+  border: 2px solid #28a745;
+}
+
+.calendar-day.empty {
+  background-color: #f9f9f9;
+  cursor: default;
+}
+
+.calendar-day:hover:not(.empty) {
+  background-color: #e0f7df;
+}
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalContent {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+}
+
+.modalContent h2 {
+  text-align: center;
+}
+
+.modalContent button {
+  margin-top: 10px;
+}
+
+.deleteButton {
+  background: none;
+  border: none;
+  color: red;
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 18px;
+}
+
+.deleteButton:hover {
+  color: darkred;
+}
+
+.modalContent button {
+  background-color: #AAB99A;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.modalContent button:hover {
+  background-color: #727D73;
+}
+
+.modalContent textarea {
+  height: 80px;
+  resize: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.modalContent h3 {
+  margin-top: 10px;
+}
+
+.modalContent input,
+.modalContent textarea {
+  width: 100%;
+  margin: 5px 0;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.modalContent button {
+  background-color: #AAB99A;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.modalContent button:hover {
+  background-color: #727D73;
+}
+
+.modalContent textarea {
+  height: 80px;
+  resize: none;
+}
+.subtask-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 5px 0;
+}
+
+.subtask-item input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.completed-subtask {
+  text-decoration: line-through;
+  color: #777;
+}
+
+.delete-subtask-button {
+  background: none;
+  border: none;
+  color: red;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.delete-subtask-button:hover {
+  color: darkred;
+}
+
+.calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.calendar-day-name {
+  padding: 5px 0;
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.calendar-day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.calendar-day.empty {
+  background-color: transparent;
+  border: none;
+}
+
+.highlight {
+  border: 2px solid green;
+}
+
+.task-indicator {
+  margin-top: 5px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: red;
+}
+
+.modalActions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.saveButton,
+.cancelButton,
+.editButton,
+.closeButton {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.saveButton {
+  background-color: #4caf50;
+  color: white;
+}
+
+.cancelButton {
+  background-color: #f44336;
+  color: white;
+}
+
+.editButton {
+  background-color: #008cba;
+  color: white;
+}
+
+.closeButton {
+  background-color: #777;
+  color: white;
+}
