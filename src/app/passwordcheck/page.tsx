@@ -23,11 +23,12 @@ export default function PasswordSecurityPage() {
   };
   
 
-  const handlePasswordChange = (e: { target: { value: any; }; }) => {
+  const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setPassword(value);
     setStrength(checkPasswordStrength(value));
   };
+  
 
   const generateSafePassword = () => {
     const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+[]{}|;:',.<>?/";
