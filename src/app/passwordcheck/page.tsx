@@ -9,7 +9,7 @@ export default function PasswordSecurityPage() {
   const [suggestion, setSuggestion] = useState("");
   const [generatedPassword, setGeneratedPassword] = useState("");
 
-  const checkPasswordStrength = (password) => {
+  const checkPasswordStrength = (password: string): string => {
     if (password.length < 6) {
       setSuggestion("Consider adding more characters, including numbers, symbols, and uppercase letters.");
       return "Weak";
@@ -21,8 +21,9 @@ export default function PasswordSecurityPage() {
       return "Strong";
     }
   };
+  
 
-  const handlePasswordChange = (e) => {
+  const handlePasswordChange = (e: { target: { value: any; }; }) => {
     const value = e.target.value;
     setPassword(value);
     setStrength(checkPasswordStrength(value));
