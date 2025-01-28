@@ -4,12 +4,12 @@ import React, { useState, useEffect } from 'react';
 import '../styles/weatherforecast.css';
 
 export default function WeatherForecastApp() {
-  const [city, setCity] = useState("");
-  const [weatherData, setWeatherData] = useState(null);
-  const [error, setError] = useState("");
+  const [city, setCity] = useState<string>("");
+  const [weatherData, setWeatherData] = useState<any>(null);
+  const [error, setError] = useState<string>("");
 
   useEffect(() => {
-    const fetchWeatherByLocation = async (lat, lon) => {
+    const fetchWeatherByLocation = async (lat: number, lon: number) => {
       const apiKey = "b7094c077fdeda09de6909c07e83e3d2"; // Replace with your OpenWeatherMap API key
       const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
 
@@ -21,7 +21,7 @@ export default function WeatherForecastApp() {
         const data = await response.json();
         setWeatherData(data);
         setError("");
-      } catch (err) {
+      } catch (err: any) {
         setWeatherData(null);
         setError(err.message);
       }
@@ -46,7 +46,7 @@ export default function WeatherForecastApp() {
     getLocation();
   }, []);
 
-  const fetchWeatherData = async (cityName) => {
+  const fetchWeatherData = async (cityName: string) => {
     const apiKey = "YOUR_API_KEY"; // Replace with your OpenWeatherMap API key
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=${apiKey}`;
 
@@ -58,20 +58,20 @@ export default function WeatherForecastApp() {
       const data = await response.json();
       setWeatherData(data);
       setError("");
-    } catch (err) {
+    } catch (err: any) {
       setWeatherData(null);
       setError(err.message);
     }
   };
 
-  const handleSearch = (e) => {
+  const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     if (city.trim() !== "") {
       fetchWeatherData(city);
     }
   };
 
-  const renderWeatherAnimation = (weather) => {
+  const renderWeatherAnimation = (weather: { main: string; temp: number }) => {
     if (!weather) return null;
     const condition = weather.main;
 
