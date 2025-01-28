@@ -80,64 +80,111 @@ export default function PortfolioPage() {
         </ul>
       </section>
 
-      {/* Hobbies Section */}
-      <section className="hobbies-section">
-        <h2>BLOG</h2>
+    
 
-        {/* Post 1 */}
-        <div className="hobby-card">
-          <div className="hobby-header">
-            <Image src="/media/me.jpeg" alt="Profile" className="profile-icon" width={50} height={50} />
-            <h3>Marcel Brard</h3>
-            <span className="hobby-options">...</span>
-          </div>
-          <Image src="/media/coffee.jpeg" alt="Enjoying Coffee" className="hobby-image" width={500} height={500} />
-          <p className="hobby-description">
-            Few things in life compare to the simple joy of enjoying a good cup of coffee. From its rich aroma to the comforting warmth, coffee is more than a drink—it's a daily ritual that brings moments of clarity and connection.
-          </p>
-          <div className="hobby-icons">
-            <span>♡</span>
-            <span>✈︎</span>
-            <span>💬</span>
-          </div>
-        </div>
+    {/* Hobbies Section */}
+    <section className="hobbies-section">
+      <h2>BLOG</h2>
 
-        {/* Post 2 */}
-        <div className="hobby-card">
-          <div className="hobby-header">
-            <Image src="/media/me.jpeg" alt="Profile" className="profile-icon" width={50} height={50} />
-            <h3>Marcel Brard</h3>
-            <span className="hobby-options">...</span>
-          </div>
-          <Image src="/media/computers.jpeg" alt="Computers" className="hobby-image" width={500} height={500} />
-          <p className="hobby-description">
-            Sometimes, productivity takes center stage, with screens filled with tasks and projects. But amidst the hustle, I find joy in what I do—turning creativity into solutions and challenges into achievements. It&apos;s not just about working hard; it&apos;s about loving every step of the journey.
-          </p>
-          <div className="hobby-icons">
-            <span>♡</span>
-            <span>✈︎</span>
-            <span>💬</span>
-          </div>
+      {/* Post 1 */}
+      <div className="hobby-card" key="post1">
+        <div className="hobby-header">
+          <Image 
+            src="/media/me.jpeg" 
+            alt="Profile picture of Marcel Brard" 
+            className="profile-icon" 
+            width={50} 
+            height={50} 
+          />
+          <h3>Marcel Brard</h3>
+          <span className="hobby-options">...</span>
         </div>
+        <Image 
+          src="/media/coffee.jpeg" 
+          alt="Enjoying Coffee" 
+          className="hobby-image" 
+          width={500} 
+          height={500} 
+        />
+        <p className="hobby-description">
+          Few things in life compare to the simple joy of enjoying a good cup of coffee. 
+          From its rich aroma to the comforting warmth, coffee is more than a drink—it&apos;s a 
+          daily ritual that brings moments of clarity and connection.
+        </p>
+        <div className="hobby-icons">
+          <span>♡</span>
+          <span>✈︎</span>
+          <span>💬</span>
+        </div>
+      </div>
 
-        {/* Post 3 */}
-        <div className="hobby-card">
-          <div className="hobby-header">
-            <Image src="/media/me.jpeg" alt="Profile" className="profile-icon" width={50} height={50} />
-            <h3>Marcel Brard</h3>
-            <span className="hobby-options">...</span>
-          </div>
-          <Image src="/media/me.jpeg" alt="Portfolio Showcase" className="hobby-image" width={500} height={500} />
-          <p className="hobby-description">
-            Creating this portfolio has been a journey of passion and dedication, and I hope those who visit can see the heart and effort behind my work. It&apos;s more than a showcase—it&apos;s an invitation. I hope you enjoy what I&apos;ve built and feel inspired to collaborate with me to create something amazing together.
-          </p>
-          <div className="hobby-icons">
-            <span>♡</span>
-            <span>✈︎</span>
-            <span>💬</span>
-          </div>
+      {/* Post 2 */}
+      <div className="hobby-card" key="post2">
+        <div className="hobby-header">
+          <Image 
+            src="/media/me.jpeg" 
+            alt="Profile picture of Marcel Brard" 
+            className="profile-icon" 
+            width={50} 
+            height={50} 
+          />
+          <h3>Marcel Brard</h3>
+          <span className="hobby-options">...</span>
         </div>
-      </section>
+        <Image 
+          src="/media/computers.jpeg" 
+          alt="Workstation setup with multiple screens" 
+          className="hobby-image" 
+          width={500} 
+          height={500} 
+        />
+        <p className="hobby-description">
+          Sometimes, productivity takes center stage, with screens filled with tasks and projects. 
+          But amidst the hustle, I find joy in what I do—turning creativity into solutions and 
+          challenges into achievements. It&apos;s not just about working hard; it&apos;s about loving 
+          every step of the journey.
+        </p>
+        <div className="hobby-icons">
+          <span>♡</span>
+          <span>✈︎</span>
+          <span>💬</span>
+        </div>
+      </div>
+
+      {/* Post 3 */}
+      <div className="hobby-card" key="post3">
+        <div className="hobby-header">
+          <Image 
+            src="/media/me.jpeg" 
+            alt="Profile picture of Marcel Brard" 
+            className="profile-icon" 
+            width={50} 
+            height={50} 
+          />
+          <h3>Marcel Brard</h3>
+          <span className="hobby-options">...</span>
+        </div>
+        <Image 
+          src="/media/me.jpeg" 
+          alt="Portfolio Showcase" 
+          className="hobby-image" 
+          width={500} 
+          height={500} 
+        />
+        <p className="hobby-description">
+          Creating this portfolio has been a journey of passion and dedication, and I hope those 
+          who visit can see the heart and effort behind my work. It&apos;s more than a showcase—it&apos;s 
+          an invitation. I hope you enjoy what I&apos;ve built and feel inspired to collaborate with me 
+          to create something amazing together.
+        </p>
+        <div className="hobby-icons">
+          <span>♡</span>
+          <span>✈︎</span>
+          <span>💬</span>
+        </div>
+      </div>
+    </section>
+
 
       {/* Contact Section */}
       <footer className="contact-section">
