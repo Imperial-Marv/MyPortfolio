@@ -3,12 +3,6 @@
 import '../styles/todo.css';
 import React, { useState, useEffect, useRef } from "react";
 
-interface Task {
-  text: string;
-  priority: string;
-  dueDate: string;
-  notes: string;
-}
 
 const TodoApp: React.FC = () => {
   const [tasks, setTasks] = useState<Task[]>([]);

@@ -1,5 +1,6 @@
 import './styles/globals.css'; 
 import React from 'react';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'Marcel Brard Portfolio',
@@ -16,8 +17,8 @@ export default function RootLayout({
       <body>
         <header style={{ padding: '10px', background: '#343a40', color: '#fff' }}>
           <nav style={{ display: 'flex', justifyContent: 'space-around' }}>
-            <a href="/" style={{ color: '#fff', textDecoration: 'none' }}>Home</a>
-            <a href="/portfolio" style={{ color: '#fff', textDecoration: 'none' }}>Portfolio</a>
+            <Link href="/" style={{ color: '#fff', textDecoration: 'none' }}>Home</Link>
+            <Link href="/portfolio" style={{ color: '#fff', textDecoration: 'none' }}>Portfolio</Link>
           </nav>
         </header>
         <main>{children}</main>

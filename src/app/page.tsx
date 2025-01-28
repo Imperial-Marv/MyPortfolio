@@ -25,7 +25,7 @@ export default function HomePage() {
           </a>
 
           <div className="bg-[#AAB99A] text-[#2D2F2E] h-40 rounded-lg shadow-md flex items-center justify-center">
-          Prep & Plate 🥗
+            Prep &amp; Plate 🥗
           </div>
           <div className="bg-[#F0F0D7] text-[#2D2F2E] h-40 rounded-lg shadow-md flex items-center justify-center">
             Project 3
@@ -46,7 +46,7 @@ export default function HomePage() {
 
           <div className="bg-[#F0F0D7] text-[#2D2F2E] h-40 rounded-lg shadow-md flex items-center justify-center">
             <Link href="/passwordcheck" className="w-full h-full flex items-center justify-center text-center font-bold hover:underline">
-            Password Security Checker 🔒
+              Password Security Checker 🔒
             </Link>
           </div>
           <div className="bg-[#AAB99A] text-[#2D2F2E] h-40 rounded-lg shadow-md flex items-center justify-center">
@@ -54,7 +54,6 @@ export default function HomePage() {
               Weather Forecast App 🌤️
             </Link>
           </div>
-
         </div>
       </section>
     </div>
