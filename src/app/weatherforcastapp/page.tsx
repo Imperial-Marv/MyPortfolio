@@ -1,11 +1,24 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
-import '../styles/weatherforecast.css';
+import React, { useState, useEffect } from "react";
+import "../styles/weatherforecast.css";
+
+// Define types
+interface WeatherData {
+  name: string;
+  main: {
+    temp: number;
+    humidity: number;
+  };
+  weather: {
+    main: string;
+    description: string;
+  }[];
+}
 
 export default function WeatherForecastApp() {
   const [city, setCity] = useState<string>("");
-  const [weatherData, setWeatherData] = useState<any>(null);
+  const [weatherData, setWeatherData] = useState<WeatherData | null>(null);
   const [error, setError] = useState<string>("");
 
   useEffect(() => {
@@ -18,12 +31,16 @@ export default function WeatherForecastApp() {
         if (!response.ok) {
           throw new Error("Unable to fetch weather for your location");
         }
-        const data = await response.json();
+        const data: WeatherData = await response.json();
         setWeatherData(data);
         setError("");
-      } catch (err: any) {
+      } catch (err: unknown) {
+        if (err instanceof Error) {
+          setError(err.message);
+        } else {
+          setError("An unknown error occurred.");
+        }
         setWeatherData(null);
-        setError(err.message);
       }
     };
 
@@ -55,12 +72,16 @@ export default function WeatherForecastApp() {
       if (!response.ok) {
         throw new Error("City not found");
       }
-      const data = await response.json();
+      const data: WeatherData = await response.json();
       setWeatherData(data);
       setError("");
-    } catch (err: any) {
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        setError(err.message);
+      } else {
+        setError("An unknown error occurred.");
+      }
       setWeatherData(null);
-      setError(err.message);
     }
   };
 
@@ -104,7 +125,9 @@ export default function WeatherForecastApp() {
               placeholder="Enter city name"
               className="search-input"
             />
-            <button type="submit" className="search-button">Search</button>
+            <button type="submit" className="search-button">
+              Search
+            </button>
           </form>
         </section>
 
@@ -116,7 +139,7 @@ export default function WeatherForecastApp() {
             <p>Temperature: {weatherData.main.temp}°C</p>
             <p>Humidity: {weatherData.main.humidity}%</p>
             <p>Forecast: {weatherData.weather[0].description}</p>
-            {renderWeatherAnimation(weatherData.weather[0])}
+            {renderWeatherAnimation({  main: weatherData.weather[0].main,  temp: weatherData.main.temp})}
           </section>
         )}
       </main>
